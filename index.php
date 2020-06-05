@@ -6,12 +6,16 @@
   <link href='packages/core/main.css' rel='stylesheet' />
   <link href='packages/daygrid/main.css' rel='stylesheet' />
   <link href='packages/timegrid/main.css' rel='stylesheet' />
+  <link href='packages/bootstrap/main.css' rel='stylesheet' />
+  <link href='packages/list/main.css' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href="estilo.css">
   <script src='packages/core/main.js'></script>
   <script src='packages/interaction/main.js'></script>
+  <script src='packages/bootstrap/main.js'></script>
   <script src='packages/daygrid/main.js'></script>
   <script src='packages/timegrid/main.js'></script>
   <script src='packages/core/locales-all.js'></script>
+  <script src='packages/list/main.js'></script>
 </head>
 <body>
   <div id='calendar'></div>
@@ -23,7 +27,8 @@
       var calendarEl = document.getElementById('calendar');
 
       var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      plugins: [ 'bootstrap','interaction', 'dayGrid', 'timeGrid','list' ],
+      themeSystem: 'cyborg',
       header: {
         left: 'prev,next, today',
         center: 'title',
@@ -52,6 +57,7 @@
     });
 
     calendar.render();
+    
   });
 
   </script>
